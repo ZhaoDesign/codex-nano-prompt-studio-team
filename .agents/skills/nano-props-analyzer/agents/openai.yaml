@@ -1,0 +1,6 @@
+interface:
+  display_name: "Nano道具分析师"
+  short_description: "只分析参考写真中的道具、环境物体、接触关系与文字"
+  default_prompt: "Use $nano-props-analyzer to analyze only the supplied reference objects and props."
+policy:
+  allow_implicit_invocation: false

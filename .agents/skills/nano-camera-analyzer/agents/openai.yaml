@@ -1,0 +1,6 @@
+interface:
+  display_name: "Nano摄影指导"
+  short_description: "只分析参考写真中的机位、透视、景别与镜头关系"
+  default_prompt: "Use $nano-camera-analyzer to analyze only the supplied reference camera geometry and return structured visual facts."
+policy:
+  allow_implicit_invocation: false

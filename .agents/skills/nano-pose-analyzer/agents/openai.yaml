@@ -1,0 +1,6 @@
+interface:
+  display_name: "Nano姿势指导"
+  short_description: "只分析参考写真中的身体轴线、动作关系、手势与表情"
+  default_prompt: "Use $nano-pose-analyzer to analyze only the supplied reference pose and return structured visual facts."
+policy:
+  allow_implicit_invocation: false

@@ -1,0 +1,6 @@
+interface:
+  display_name: "Nano场景分析师"
+  short_description: "只分析参考写真的场景构图、空间层次与背景关系"
+  default_prompt: "Use $nano-scene-analyzer to analyze only the supplied reference scene and return structured visual facts."
+policy:
+  allow_implicit_invocation: false

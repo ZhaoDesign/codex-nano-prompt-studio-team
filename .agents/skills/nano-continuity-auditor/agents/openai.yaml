@@ -1,0 +1,6 @@
+interface:
+  display_name: "Nano连续性校片师"
+  short_description: "只审查参考权限、冲突、增量修改与最终提示词约束"
+  default_prompt: "Use $nano-continuity-auditor to audit merged Nano Banana replication facts and constraints."
+policy:
+  allow_implicit_invocation: false

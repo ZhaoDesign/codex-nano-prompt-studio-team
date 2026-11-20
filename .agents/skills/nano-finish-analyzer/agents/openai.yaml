@@ -1,0 +1,6 @@
+interface:
+  display_name: "Nano质感指导"
+  short_description: "只分析参考写真中的色彩、材质、颗粒、锐度与镜头质感"
+  default_prompt: "Use $nano-finish-analyzer to analyze only the supplied reference color and photographic finish."
+policy:
+  allow_implicit_invocation: false

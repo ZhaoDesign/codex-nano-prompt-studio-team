@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="1660" viewBox="0 0 1280 1660" role="img" aria-labelledby="title desc">
+  <title id="title">Nano Prompt Studio 分层复刻工作流</title>
+  <desc id="desc">从目标模板和身份自拍开始，经 PixVerse 模型核验、人物与无人背景分析、分支提示词验证、差异修复和合成验证，输出提示词与独立验证记录。</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f4f8ff"/><stop offset="1" stop-color="#edf6f5"/></linearGradient>
+    <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e7f0ff"/><stop offset="1" stop-color="#dbeafe"/></linearGradient>
+    <linearGradient id="green" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e4f7ef"/><stop offset="1" stop-color="#d2f1e4"/></linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff4d6"/><stop offset="1" stop-color="#ffe7b3"/></linearGradient>
+    <filter id="shadow" x="-15%" y="-15%" width="130%" height="140%"><feDropShadow dx="0" dy="7" stdDeviation="9" flood-color="#24324b" flood-opacity=".11"/></filter>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M1 1 L11 6 L1 11 Z" fill="#65758b"/></marker>
+    <style>
+      text{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;fill:#17263e}
+      .title{font-size:42px;font-weight:750}.subtitle{font-size:20px;fill:#5b6b80}.h{font-size:25px;font-weight:700}.p{font-size:19px;fill:#42536a}.small{font-size:16px;fill:#53647b}.tag{font-size:15px;font-weight:700;letter-spacing:1px}.num{font-size:18px;font-weight:800;fill:#fff}
+      .card{stroke:#d6e1ee;stroke-width:2;filter:url(#shadow)}.line{fill:none;stroke:#65758b;stroke-width:3;marker-end:url(#arrow)}
+    </style>
+  </defs>
+  <rect width="1280" height="1660" rx="34" fill="url(#bg)"/>
+  <text x="640" y="74" text-anchor="middle" class="title">Nano Prompt Studio</text>
+  <text x="640" y="110" text-anchor="middle" class="subtitle">从目标画面到可验证提示词 · 分层、对照、修复、合成</text>
+
+  <rect x="280" y="145" width="720" height="126" rx="22" fill="#fff" class="card"/>
+  <circle cx="325" cy="190" r="20" fill="#316fce"/><text x="325" y="197" text-anchor="middle" class="num">1</text>
+  <text x="365" y="190" class="h">输入与素材分工</text>
+  <text x="365" y="224" class="p">目标模板 = 场景基准　·　自拍 = 明确授权的身份字段　·　文字 = 本轮修改要求</text>
+  <text x="365" y="250" class="small">先确认每张图的角色；遮挡与不可见内容标为不确定。</text>
+
+  <path d="M640 272 V310" class="line"/>
+  <rect x="355" y="315" width="570" height="104" rx="20" fill="url(#gold)" class="card"/>
+  <circle cx="400" cy="367" r="20" fill="#d98c16"/><text x="400" y="374" text-anchor="middle" class="num">2</text>
+  <text x="440" y="356" class="h">生图前核验 PixVerse CLI</text>
+  <text x="440" y="389" class="p">确认模型：Gemini Nano Banana 2.1</text>
+
+  <path d="M640 420 V452 M640 452 H330 V481 M640 452 H950 V481" class="line"/>
+  <rect x="78" y="487" width="504" height="152" rx="22" fill="url(#blue)" class="card"/>
+  <circle cx="124" cy="536" r="20" fill="#316fce"/><text x="124" y="543" text-anchor="middle" class="num">3A</text>
+  <text x="164" y="536" class="h">人物＋手持/穿戴物</text>
+  <text x="164" y="571" class="p">从目标模板生成分析图</text>
+  <text x="164" y="602" class="small">均匀纯色、高反差、不透明；不抠图、不色键</text>
+  <rect x="698" y="487" width="504" height="152" rx="22" fill="url(#green)" class="card"/>
+  <circle cx="744" cy="536" r="20" fill="#25825c"/><text x="744" y="543" text-anchor="middle" class="num">3B</text>
+  <text x="784" y="536" class="h">无人背景</text>
+  <text x="784" y="571" class="p">从目标模板生成环境分析图</text>
+  <text x="784" y="602" class="small">保留空间与物件；人物验证时不上传这张图</text>
+
+  <path d="M330 640 V680 M950 640 V680" class="line"/>
+  <rect x="78" y="686" width="504" height="173" rx="22" fill="#fff" class="card"/>
+  <text x="112" y="730" class="tag" fill="#316fce">PERSON BRANCH</text>
+  <text x="112" y="765" class="h">人物提示词验证</text>
+  <text x="112" y="800" class="p">只上传本轮自拍 @图1</text>
+  <text x="112" y="830" class="small">目标图与分析图都不上传；逐轮对照人物分析层</text>
+  <rect x="698" y="686" width="504" height="173" rx="22" fill="#fff" class="card"/>
+  <text x="732" y="730" class="tag" fill="#25825c">BACKGROUND BRANCH</text>
+  <text x="732" y="765" class="h">背景提示词验证</text>
+  <text x="732" y="800" class="p">纯文本验证，不上传任何参考图</text>
+  <text x="732" y="830" class="small">逐轮对照无人背景分析层与目标可见区域</text>
+
+  <path d="M330 860 V901 M950 860 V901" class="line"/>
+  <rect x="78" y="907" width="504" height="148" rx="22" fill="#f5f1ff" class="card"/>
+  <text x="112" y="951" class="h">对照差异 → 精准修复</text>
+  <text x="112" y="986" class="p">每支线：首轮 + 最多两次修复</text>
+  <text x="112" y="1018" class="small">每轮记差异；只改有证据的字段，未知处不猜</text>
+  <rect x="698" y="907" width="504" height="148" rx="22" fill="#f5f1ff" class="card"/>
+  <text x="732" y="951" class="h">对照差异 → 精准修复</text>
+  <text x="732" y="986" class="p">每支线：首轮 + 最多两次修复</text>
+  <text x="732" y="1018" class="small">保留已接受字段；没有进步或预算用尽则停止</text>
+
+  <path d="M330 1056 V1090 H640 M950 1056 V1090 H640 V1122" class="line"/>
+  <rect x="280" y="1128" width="720" height="146" rx="22" fill="url(#gold)" class="card"/>
+  <circle cx="325" cy="1176" r="20" fill="#d98c16"/><text x="325" y="1183" text-anchor="middle" class="num">4</text>
+  <text x="365" y="1176" class="h">合并提示词与最终验证</text>
+  <text x="365" y="1211" class="p">默认只上传自拍 @图1；目标图与分析层不上传</text>
+  <text x="365" y="1242" class="small">只有已授权且确有自拍背景干扰时，才追加无人背景 @图2</text>
+
+  <path d="M640 1275 V1314" class="line"/>
+  <rect x="205" y="1320" width="870" height="145" rx="22" fill="#17314f" filter="url(#shadow)"/>
+  <text x="640" y="1366" text-anchor="middle" class="h" fill="#fff">交付两份独立结果</text>
+  <text x="640" y="1404" text-anchor="middle" class="p" fill="#e4edf7">① 完整可复制提示词　　② 验证对比记录</text>
+  <text x="640" y="1437" text-anchor="middle" class="small" fill="#c8d6e6">记录模型、实际尺寸、轮次、接受项与未解决差异</text>
+
+  <rect x="279" y="1511" width="722" height="73" rx="18" fill="#fff" stroke="#d6e1ee" stroke-width="2"/>
+  <text x="640" y="1542" text-anchor="middle" class="small">提示词里的尺寸参数 ≠ 服务端实际像素；每张结果都要读回并核验。</text>
+  <text x="640" y="1566" text-anchor="middle" class="small">不承诺像素级一致；只报告真实对照结果。</text>
+</svg>

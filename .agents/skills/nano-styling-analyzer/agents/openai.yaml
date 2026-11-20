@@ -1,0 +1,6 @@
+interface:
+  display_name: "Nano造型指导"
+  short_description: "只分析参考写真中的身份权限、穿搭、妆发与配饰"
+  default_prompt: "Use $nano-styling-analyzer to analyze only the supplied reference styling and identity roles."
+policy:
+  allow_implicit_invocation: false

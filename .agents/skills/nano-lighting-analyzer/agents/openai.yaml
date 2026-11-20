@@ -1,0 +1,6 @@
+interface:
+  display_name: "Nano灯光指导"
+  short_description: "只分析参考写真中的光源方向、光质、曝光与环境反光"
+  default_prompt: "Use $nano-lighting-analyzer to analyze only the supplied reference lighting system and return structured visual facts."
+policy:
+  allow_implicit_invocation: false

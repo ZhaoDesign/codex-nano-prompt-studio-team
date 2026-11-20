@@ -1,0 +1,14 @@
+interface:
+  display_name: "Nano提示词工作室"
+  short_description: "单入口编排多角色分析、PixVerse生图与复刻迭代"
+  default_prompt: "Use $nano-prompt-studio as the single director to analyze the supplied target image and return a complete segmented Chinese Nano Banana prompt with stable section headings by visual dimension, not JSON; optionally run a bounded PixVerse standard Nano Banana 2 generation-and-repair loop. Never use Lite."
+  icon_small: "./assets/icon.svg"
+  icon_large: "./assets/icon.svg"
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true
+
