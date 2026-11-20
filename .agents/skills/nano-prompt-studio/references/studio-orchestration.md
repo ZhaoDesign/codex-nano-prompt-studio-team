@@ -2,6 +2,8 @@
 
 Use this file when `nano-prompt-studio` handles a complex reference photo, several visible objects, fragile body geometry, multiple reference images, or a supplied candidate result. It defines the internal studio workflow. Do not expose the role reports unless the user asks for an analysis report.
 
+When a multi-image upload lacks an explicit per-image role map, pause to ask before analysis or upload; missing required identity selfies must be requested before identity-bound generation. Before each PixVerse image call, verify login and the exact Gemini Nano Banana 2.1 capability response.
+
 For the actual multi-Agent execution contract, read [agent-delegation.md](agent-delegation.md). The role references below describe domain behavior; `agent-delegation.md` defines the required spawn, wait, audit, and synthesis stages.
 
 ## Operating principle
@@ -15,7 +17,7 @@ Choose the lightest path that can preserve the target:
 - **Fast path**: only when the user explicitly asks for a quick analysis. Use scene/composition, camera, pose, styling, and the existing checklist.
 - **Deep path**: the default for a normal full image reverse-engineering request. Spawn scene, camera, lighting, pose, styling, props, and finish workers in parallel, then run continuity.
 - **Repair path**: when a candidate result is supplied, compare the complete visible frame against the target and inventory every material, controllable mismatch, not only the user's latest complaint. By default, repair all high-confidence material mismatches using the minimal union of their owner roles, then run continuity and final validation. If the user explicitly limits the round, repair only that scope and keep other visible mismatches marked `deferred`, never silently accepted. A candidate does not authorize a full seven-role rerun.
-- **Staged layer path**: only when the user explicitly requests subject/background decomposition and separate PixVerse validation. Follow the gates and upload roles in [pixverse-closed-loop.md](pixverse-closed-loop.md): generate a person-plus-solid-color-matte image and an unoccupied-background image from the target with PixVerse Nano Banana 2; no transparency or local cutout is required, and these asset generations are distinct from prompt validation. Person validation uses only the current selfie, background validation has no image references, and merged validation adds a background `@图2` only for demonstrated selfie-background leakage when authorized.
+- **Staged layer path**: only when the user explicitly requests subject/background decomposition and separate PixVerse validation. Follow the gates and upload roles in [pixverse-closed-loop.md](pixverse-closed-loop.md): generate a person-plus-solid-color-matte image and an unoccupied-background image from the target with PixVerse Gemini Nano Banana 2.1; no transparency or local cutout is required, and these asset generations are distinct from prompt validation. Person validation uses only the current selfie, background validation has no image references, and merged validation adds a background `@图2` only for demonstrated selfie-background leakage when authorized.
 
 ## Internal role specifications
 
