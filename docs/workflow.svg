@@ -21,21 +21,21 @@
   <rect x="280" y="145" width="720" height="126" rx="22" fill="#fff" class="card"/>
   <circle cx="325" cy="190" r="20" fill="#316fce"/><text x="325" y="197" text-anchor="middle" class="num">1</text>
   <text x="365" y="190" class="h">输入与素材分工</text>
-  <text x="365" y="224" class="p">目标模板 = 场景基准　·　自拍 = 明确授权的身份字段　·　文字 = 本轮修改要求</text>
-  <text x="365" y="250" class="small">先确认每张图的角色；遮挡与不可见内容标为不确定。</text>
+  <text x="365" y="224" class="p">逐张标注：目标模板 / 生成引用 / 文字分析 / 候选；标明自拍对应人物</text>
+  <text x="365" y="250" class="small">多图角色不明先询问；缺少自拍提醒补传；遮挡处标为不确定。</text>
 
   <path d="M640 272 V310" class="line"/>
   <rect x="355" y="315" width="570" height="104" rx="20" fill="url(#gold)" class="card"/>
   <circle cx="400" cy="367" r="20" fill="#d98c16"/><text x="400" y="374" text-anchor="middle" class="num">2</text>
   <text x="440" y="356" class="h">生图前核验 PixVerse CLI</text>
-  <text x="440" y="389" class="p">确认模型：Gemini Nano Banana 2.1</text>
+  <text x="440" y="389" class="small">未登录先提醒；每次生图确认 Gemini Nano Banana 2.1</text>
 
   <path d="M640 420 V452 M640 452 H330 V481 M640 452 H950 V481" class="line"/>
   <rect x="78" y="487" width="504" height="152" rx="22" fill="url(#blue)" class="card"/>
   <circle cx="124" cy="536" r="20" fill="#316fce"/><text x="124" y="543" text-anchor="middle" class="num">3A</text>
   <text x="164" y="536" class="h">人物＋手持/穿戴物</text>
   <text x="164" y="571" class="p">从目标模板生成分析图</text>
-  <text x="164" y="602" class="small">均匀纯色、高反差、不透明；不抠图、不色键</text>
+  <text x="164" y="602" class="small">均匀均匀纯色、高反差、不透明；不抠图、不色键</text>
   <rect x="698" y="487" width="504" height="152" rx="22" fill="url(#green)" class="card"/>
   <circle cx="744" cy="536" r="20" fill="#25825c"/><text x="744" y="543" text-anchor="middle" class="num">3B</text>
   <text x="784" y="536" class="h">无人背景</text>
